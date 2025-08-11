@@ -14,41 +14,194 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body id="top">
-  <h1>مكتبة الفضل المبين الطبية</h1>
-
-<section id="categories">
-  <h2 style="text-align:center; color:#555; margin-bottom: 20px;">الأقسام الرئيسية</h2>
-  <div class="category-list">
-    <a href="#" class="category-item">
-      <img src="https://img.icons8.com/ios-filled/100/000000/book.png" alt="كتب الطب البشري" />
-      <span>كتب الطب البشري</span>
-    </a>
-    <a href="#" class="category-item">
-      <img src="https://img.icons8.com/ios-filled/100/000000/medicine-bottle.png" alt="كتب الصيدلة" />
-      <span>كتب الصيدلة</span>
-    </a>
-    <a href="#" class="category-item">
-      <img src="https://img.icons8.com/ios-filled/100/000000/research.png" alt="الأبحاث والمقالات" />
-      <span>الأبحاث والمقالات</span>
-    </a>
-    <a href="#" class="category-item">
-      <img src="https://img.icons8.com/ios-filled/100/000000/video.png" alt="الفيديوهات التعليمية" />
-      <span>الفيديوهات التعليمية</span>
-    </a>
-    <a href="#" class="category-item">
-      <img src="https://img.icons8.com/ios-filled/100/000000/image-gallery.png" alt="الصور التوضيحية" />
-      <span>الصور التوضيحية</span>
-    </a>
+  [١١/‏٨, ٥:٢٤ ص] AI: ```html
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>مكتبة الفضل الطبية</title>
+<style>
+  body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f5f8fa;
+    margin: 0; padding: 0;
+    direction: rtl;
+    color: #333;
+  }
+  header {
+    background: linear-gradient(90deg, #005f73, #0a9396);
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+  header h1 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 2.5rem;
+  }
+  nav {
+    margin-top: 10px;
+  }
+  nav select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .search-bar {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .search-bar input[type="search"] {
+    width: 60%;
+    max-width: 400px;
+    padding: 12px 15px;
+    border-radius: 30px;
+    border: 1px solid #0a9396;
+    font-size: 1.1rem;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+  }
+  .search-bar input[type="search"]:focus {
+    box-shadow: 0 0 8px #0a9396;
+  }
+  .sections {
+    display: flex;
+[١١/‏٨, ٥:٢٤ ص] AI: flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+  }
+  .section {
+    background: #e0fbfc;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(10, 147, 150, 0.3);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(10, 147, 150, 0.5);
+  }
+  .section h2 {
+    margin: 15px 0 10px;
+    color: #005f73;
+    font-size: 1.5rem;
+  }
+  .section p {
+    font-size: 1rem;
+    color: #333;
+  }
+  footer {
+    text-align: center;
+    padding: 20px;
+    background: #0a9396;
+    color: white;
+    margin-top: 60px;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>مكتبة الفضل الطبية</h1>
+  <nav>
+    <select id="languageSwitcher" aria-label="اختيار اللغة">
+      <option value="ar" selected>العربية</option>
+      <option value="en">English</option>
+    </select>
+  </nav>
+</header>
+<main>
+  <div class="search-bar">
+    <input type="search" id="searchInput" placeholder="ابحث في المكتبة الطبية..." aria-label="بحث" />
   </div>
-</section>
+  <div class="sections" id="sectionsContainer">
+    <div class="section" data-section="طب بشري">
+      <h2>طب بشري</h2>
+      <p>فيديوهات، صور، أبحاث وأحدث المعلومات الطبية.</p>
+    </div>
+[١١/‏٨, ٥:٢٤ ص] AI: <div class="section" data-section="طب أسنان">
+      <h2>طب أسنان</h2>
+      <p>المراجع والدراسات المتخصصة في طب الأسنان.</p>
+    </div>
+    <div class="section" data-section="الصيدلة">
+      <h2>الصيدلة</h2>
+      <p>كل ما يخص الأدوية والعقاقير الطبية.</p>
+    </div>
+    <div class="section" data-section="التمريض">
+      <h2>التمريض</h2>
+      <p>المقالات والأبحاث الخاصة بالرعاية التمريضية.</p>
+    </div>
+  </div>
+</main>
+<footer>
+  © 2025 مكتبة الفضل الطبية
+</footer>
+<script>
+  const languageSwitcher = document.getElementById('languageSwitcher');
+  const sectionsContainer = document.getElementById('sectionsContainer');
+  const searchInput = document.getElementById('searchInput');
+  
+  const content = {
+    ar: {
+      searchPlaceholder: "ابحث في المكتبة الطبية...",
+      sections: [
+        { title: "طب بشري", desc: "فيديوهات، صور، أبحاث وأحدث المعلومات الطبية." },
+        { title: "طب أسنان", desc: "المراجع والدراسات المتخصصة في طب الأسنان." },
+        { title: "الصيدلة", desc: "كل ما يخص الأدوية والعقاقير الطبية." },
+        { title: "التمريض", desc: "المقالات والأبحاث الخاصة بالرعاية التمريضية." }
+      ]
+    },
+    en: {
+      searchPlaceholder: "Search the medical library...",
+      sections: [
+[١١/‏٨, ٥:٢٤ ص] AI: { title: "Human Medicine", desc: "Videos, images, research, and latest medical info." },
+        { title: "Dentistry", desc: "References and studies specialized in dentistry." },
+        { title: "Pharmacy", desc: "Everything related to medicines and drugs." },
+        { title: "Nursing", desc: "Articles and research on nursing care." }
+      ]
+    }
+  };
 
+  function renderSections(lang) {
+    sectionsContainer.innerHTML = '';
+    content[lang].sections.forEach(sec => {
+      const div = document.createElement('div');
+      div.className = 'section';
+      div.innerHTML = `<h2>sec.title</h2><p>{sec.desc}</p>`;
+      sectionsContainer.appendChild(div);
+    });
+    searchInput.placeholder = content[lang].searchPlaceholder;
+  }
+
+  languageSwitcher.addEventListener('change', e => {
+    renderSections(e.target.value);
+    if(e.target.value === 'en') {
+      document.documentElement.dir = 'ltr';
+      document.body.style.direction = 'ltr';
+    } else {
+      document.documentElement.dir = 'rtl';
+      document.body.style.direction = 'rtl';
+    }
+  });
+
+  renderSections('ar');
+</script>
 </body>
 </html>
 ```
-
-- الصور من موقع icons8 (مجانية وبسيطة).
-- كل قسم عبارة عن رابط (حاليًا #) تقدر تغيّريه لروابط صفحاتك.
-- التصميم بسيط، أنيق، ومتجاوب على الموبايل.
   <div class="preloader" data-preloader>
     <div class="circle"></div>
   </div>
@@ -582,3 +735,4 @@
 </body>
 
 </html>
+
